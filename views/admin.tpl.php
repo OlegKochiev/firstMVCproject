@@ -10,20 +10,20 @@
     <meta name="author" content="">
 
     <title>Страница администратора</title>
- <!-- Bootstrap Core CSS -->
- <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 
-<!-- MetisMenu CSS -->
-<link href="../css/admin/metisMenu.min.css" rel="stylesheet">
+    <!-- MetisMenu CSS -->
+    <link href="../css/admin/metisMenu.min.css" rel="stylesheet">
 
-<!-- Custom CSS -->
-<link href="../css/admin/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/admin/sb-admin-2.css" rel="stylesheet">
 
-<!-- Morris Charts CSS -->
-<link href="../css/admin/morris.css" rel="stylesheet">
+    <!-- Morris Charts CSS -->
+    <link href="../css/admin/morris.css" rel="stylesheet">
 
-<!-- Custom Fonts -->
-<link href="../css/admin/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom Fonts -->
+    <link href="../css/admin/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 
     
@@ -273,19 +273,11 @@
                             <a href="/"><i class="fa fa-dashboard fa-fw"></i> Статистика</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="flot.html">Flot Charts</a>
-                                </li>
-                                <li>
-                                    <a href="morris.html">Morris.js Charts</a>
-                                </li>
-                            </ul>
+                            <a href="/admin/products"><i class="fa fa-bar-chart-o fa-fw"></i> Товары<span class="fa arrow"></span></a>
+                            <a href="/admin/users"><i class="fa fa-bar-chart-o fa-fw"></i> Пользователи<span class="fa arrow"></span></a>
+                            <a href="/admin/orders"><i class="fa fa-bar-chart-o fa-fw"></i> Заказы<span class="fa arrow"></span></a>
                             <!-- /.nav-second-level -->
                         </li>
-                       
-                        
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

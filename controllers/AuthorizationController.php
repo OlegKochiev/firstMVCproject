@@ -8,8 +8,8 @@ class AuthorizationController extends Controller
         if ($_SESSION['user']) {
             header("Location: /");
         } else {
-            $this->page_datas['title'] = "Вход в личный кабинет.";
-            $this->view->render($this->page_template, $this->page_datas);
+            $this->page_data['title'] = "Вход в личный кабинет.";
+            $this->view->render($this->page_template, $this->page_data);
         }
     }
     public function login(){

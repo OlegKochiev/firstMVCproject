@@ -5,13 +5,13 @@ class AdminController extends Controller
 
     public function index(){
         if ($_SESSION['user']) {
-            $page_data['title'] = 'Личный кабинет';
-            $page_data['users_count'] = $this->model->get_users_count();
-            $page_data['orders_count'] = $this->model->get_orders_count();
-            $page_data['products_count'] = $this->model->get_products_count();
+            $this->page_data['title'] = 'Личный кабинет';
+            $this->page_data['users_count'] = $this->model->get_users_count();
+            $this->page_data['orders_count'] = $this->model->get_orders_count();
+            $this->page_data['products_count'] = $this->model->get_products_count();
             $orders = $this->model->get_orders();
-            $page_data['orders'] = $orders;
-            $this->view->render($this->template, $page_data);
+            $this->page_data['orders'] = $orders;
+            $this->view->render($this->template, $this->page_data);
         } else {
             header("Location: /authorization");
         }
