@@ -1,18 +1,18 @@
 <?php
 class AuthorizationModel extends Model
 {
-    public function check_user($login, $password){
-        $sql = "SELECT * FROM users WHERE login = :login AND password = :password";
+    public function get_user_id($login, $password){
+        $sql = "SELECT id FROM users WHERE login = :login AND password = :password";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue(":login", $login, PDO::PARAM_STR);
         $stmt->bindValue(":password", md5($password), PDO::PARAM_STR);
         $stmt->execute();
-        $res = $stmt->fetch(PDO::FETCH_ASSOC);
+        $res = $stmt->fetch();
         if (!empty($res)) {
-            $auth_status = true;
+            $user_id = $res['id'];
         } else {
-            $auth_status = false;
+            $user_id = false;
         }
-        return $auth_status;
+        return $user_id;
     }
 }

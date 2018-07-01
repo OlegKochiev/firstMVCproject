@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 define("PATH", dirname(dirname(__FILE__)));
 define("CONTROLLER_PATH", PATH.'/controllers/');
 define("MODEL_PATH", PATH.'/models/');
